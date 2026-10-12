@@ -75,6 +75,9 @@ class Geo
     {
         $g = self::find($ip);
         if (!$g) {
+            if (Ip::isRange($ip)) {
+                return 'Plage d\'adresses';
+            }
             return Ip::isPublic($ip) ? '' : 'Réseau local';
         }
         $place = trim($g['city'] . ($g['city'] && $g['country'] ? ', ' : '') . $g['country']);
