@@ -1,0 +1,50 @@
+/* LWB IP — page « Connexions et sécurité » et carte du tableau de bord (espace client). */
+.lwbipc{--c-ink:var(--lwm-text,#0d0d2b);--c-ink2:var(--lwm-muted,#575b78);--c-line:var(--lwm-border,#e6e9f2);--c-brand:var(--lwm-primary,#030673);--c-brand50:var(--lwm-primary-50,#eef0fb);
+  --c-good:#067a06;--c-good-bg:#e7f6e7;--c-danger:#b42318;--c-danger-bg:#fdecec;display:flex;flex-direction:column;gap:16px;color:var(--c-ink)}
+.lwbipc *{box-sizing:border-box}
+.lwbipc-flash{padding:13px 16px;border-radius:12px;font-weight:600}
+.lwbipc-success{background:var(--c-good-bg);color:var(--c-good)}
+.lwbipc-danger{background:var(--c-danger-bg);color:var(--c-danger)}
+.lwbipc-hero{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:22px;border-radius:18px;background:linear-gradient(135deg,var(--c-brand) 0%,#1a1d8f 100%);color:#fff}
+.lwbipc-hero h2{margin:0 0 6px;font-size:20px;font-weight:800;color:#fff}
+.lwbipc-hero p{margin:0;color:rgba(255,255,255,.82);max-width:620px}
+.lwbipc-hero-ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.14);font-size:22px}
+.lwbipc-now{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px}
+.lwbipc-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
+.lwbipc-hero-actions{display:flex;flex-direction:column;gap:8px}
+.lwbipc-hero .lwbipc-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff!important}
+.lwbipc-hero .lwbipc-btn-primary{background:#fff;color:var(--c-brand)!important;border-color:#fff}
+.lwbipc-card{background:#fff;border:1px solid var(--c-line);border-radius:16px;padding:18px 20px}
+.lwbipc-card>header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.lwbipc-card>header h3{margin:0;font-size:16px;font-weight:800}
+.lwbipc-card>header span{color:var(--c-ink2);font-size:12.5px}
+.lwbipc-list{list-style:none;margin:0;padding:0}
+.lwbipc-list li{display:grid;grid-template-columns:auto 1fr auto auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid #eef1f7}
+.lwbipc-list li:last-child{border-bottom:0}
+.lwbipc-list li.is-current .lwbipc-dev{background:var(--c-good-bg);color:var(--c-good)}
+.lwbipc-list li.is-blocked{opacity:.65}
+.lwbipc-dev{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--c-brand50);color:var(--c-brand)}
+.lwbipc-dev-danger{background:var(--c-danger-bg);color:var(--c-danger)}
+.lwbipc-main b{display:block;font-weight:700}
+.lwbipc-main small{display:block;color:var(--c-ink2);font-size:12.5px;overflow-wrap:anywhere}
+.lwbipc-when{color:var(--c-ink2);font-size:12.5px;white-space:nowrap}
+.lwbipc-act form{margin:0}
+.lwbipc-pill{display:inline-block;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700;background:#f1f2f7;color:var(--c-ink2);white-space:nowrap}
+.lwbipc-pill-good{background:var(--c-good-bg);color:var(--c-good)}
+.lwbipc-pill-danger{background:var(--c-danger-bg);color:var(--c-danger)}
+.lwbipc-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 16px;border:1px solid var(--c-line);border-radius:10px;background:#fff;color:var(--c-ink)!important;font-weight:700;font-size:13.5px;text-decoration:none!important;cursor:pointer;white-space:nowrap}
+.lwbipc-btn:hover{border-color:var(--c-brand)}
+.lwbipc-btn-primary{background:var(--c-brand);border-color:var(--c-brand);color:#fff!important}
+.lwbipc-btn-sm{height:34px;padding:0 12px;font-size:12.5px}
+.lwbipc-empty{text-align:center;padding:24px 10px;color:var(--c-ink2)}
+.lwbipc-empty i{font-size:22px;color:var(--c-brand);margin-bottom:6px}
+.lwbipc-empty p{margin:0}
+.lwbipc-hint{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:var(--c-brand50);color:var(--c-ink2);font-size:12.5px}
+@media (max-width:767px){
+  .lwbipc-hero{grid-template-columns:1fr;text-align:left}
+  .lwbipc-hero-actions{flex-direction:row;flex-wrap:wrap}
+  .lwbipc-list li{grid-template-columns:auto 1fr;row-gap:8px}
+  .lwbipc-when{grid-column:2}
+  .lwbipc-act{grid-column:1 / -1}
+  .lwbipc-act .lwbipc-btn{width:100%}
+}
