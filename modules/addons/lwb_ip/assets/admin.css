@@ -89,3 +89,5 @@
 .lwbip-emergency p,.lwbip-emergency ul{color:var(--ink2);margin:8px 0}
 @media (max-width:1100px){.lwbip-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.lwbip-grid>.span-8,.lwbip-grid>.span-4{grid-column:span 12}}
 @media (max-width:600px){.lwbip-kpis{grid-template-columns:1fr}.lwbip-search{min-width:0;width:100%}}
+/* Téléphone : les tableaux posés directement dans une carte défilent dans la carte au lieu de pousser la page. */
+@media (max-width:767px){.lwbip-card>.lwbip-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}.lwbip-card>.lwbip-table th,.lwbip-card>.lwbip-table td{white-space:nowrap}}
