@@ -118,6 +118,7 @@ class Client
                     'me_place' => Geo::label($me),
                     'flash' => $flash,
                     'retention' => (int) Store::setting('retention', 90),
+                    'v' => (int) @filemtime(dirname(__DIR__) . '/assets/client.css'),
                 ],
             ],
         ];

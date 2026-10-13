@@ -1,5 +1,5 @@
 {* LWB IP — connexions et sécurité du compte · LEWEBMAX Admin *}
-<link rel="stylesheet" href="{$WEB_ROOT}/modules/addons/lwb_ip/assets/client.css">
+<link rel="stylesheet" href="{$WEB_ROOT}/modules/addons/lwb_ip/assets/client.css?v={$lwbip.v}">
 <div class="lwbipc">
 
     {if $lwbip.flash}
