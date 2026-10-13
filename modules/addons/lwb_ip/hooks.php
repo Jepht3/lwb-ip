@@ -64,11 +64,16 @@ add_hook('ClientAreaPage', 2, function ($vars) {
         if (Store::isBlocked($userId, $ip)) {
             lwb_ip_kick($userId, $ip);
         }
-        $isHome = basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')) === 'clientarea.php' && empty($_REQUEST['action']);
-        if ($isHome && Store::flag('client_page')) {
-            $card = Client::card($userId);
-            return $card ? ['lwbIp' => $card] : [];
+        if (!Store::flag('client_page')) {
+            return [];
         }
+        // Link for themes that build their own menus (LWB Theme reads $lwbIpUrl).
+        $out = ['lwbIpUrl' => 'index.php?m=lwb_ip'];
+        $isHome = basename((string) ($_SERVER['SCRIPT_NAME'] ?? '')) === 'clientarea.php' && empty($_REQUEST['action']);
+        if ($isHome) {
+            $out['lwbIp'] = Client::card($userId);
+        }
+        return $out;
     } catch (\Throwable $e) {
         logActivity('LWB IP (espace client) : ' . $e->getMessage());
     }

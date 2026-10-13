@@ -64,7 +64,8 @@ class Client
     {
         $rows = self::loginRows($userId, 10);
         if (!$rows) {
-            return null;
+            // No login recorded yet (history starts with the module): the card still shows, with a short note.
+            return ['logins' => [], 'alert' => false, 'blocked' => 0, 'url' => 'index.php?m=lwb_ip'];
         }
         // New place: the last login comes from a country not seen in the previous ones.
         $alert = false;
