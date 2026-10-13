@@ -13,7 +13,7 @@
             <p>Vérifiez que chaque connexion vient bien de vous. Si une connexion vous semble inconnue, bloquez l'adresse puis changez votre mot de passe.</p>
             <div class="lwbipc-now">
                 <span class="lwbipc-dot"></span>
-                Vous êtes connecté depuis <b>{$lwbip.me_short|escape}</b>{if $lwbip.me_place} · {$lwbip.me_place|escape}{/if}
+                <span>Vous êtes connecté depuis <b>{$lwbip.me_short|escape}</b>{if $lwbip.me_place} · {$lwbip.me_place|escape}{/if}</span>
             </div>
         </div>
         <div class="lwbipc-hero-actions">

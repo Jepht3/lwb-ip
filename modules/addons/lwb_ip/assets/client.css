@@ -6,11 +6,12 @@
 .lwbipc-success{background:var(--c-good-bg);color:var(--c-good)}
 .lwbipc-danger{background:var(--c-danger-bg);color:var(--c-danger)}
 .lwbipc-hero{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:22px;border-radius:18px;background:linear-gradient(135deg,var(--c-brand) 0%,#1a1d8f 100%);color:#fff}
-.lwbipc-hero h2{margin:0 0 6px;font-size:20px;font-weight:800;color:#fff}
+.lwbipc .lwbipc-hero h2{margin:0 0 6px;font-size:20px;font-weight:800;color:#fff!important}
 .lwbipc-hero p{margin:0;color:rgba(255,255,255,.82);max-width:620px}
 .lwbipc-hero-ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(255,255,255,.14);font-size:22px}
 .lwbipc-now{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:13px}
-.lwbipc-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
+.lwbipc-now>span:last-child{min-width:0;overflow-wrap:anywhere;line-height:1.45}
+.lwbipc-dot{flex:none;width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25)}
 .lwbipc-hero-actions{display:flex;flex-direction:column;gap:8px}
 .lwbipc-hero .lwbipc-btn{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff!important}
 .lwbipc-hero .lwbipc-btn-primary{background:#fff;color:var(--c-brand)!important;border-color:#fff}
@@ -41,7 +42,8 @@
 .lwbipc-empty p{margin:0}
 .lwbipc-hint{margin:12px 0 0;padding:12px 14px;border-radius:12px;background:var(--c-brand50);color:var(--c-ink2);font-size:12.5px}
 @media (max-width:767px){
-  .lwbipc-hero{grid-template-columns:1fr;text-align:left}
+  .lwbipc-hero{grid-template-columns:1fr;text-align:left;padding:18px}
+  .lwbipc-now{display:flex;border-radius:12px;padding:8px 12px}
   .lwbipc-hero-actions{flex-direction:row;flex-wrap:wrap}
   .lwbipc-list li{grid-template-columns:auto 1fr;row-gap:8px}
   .lwbipc-when{grid-column:2}
